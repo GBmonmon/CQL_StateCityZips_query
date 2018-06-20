@@ -1,0 +1,12 @@
+    CREATE TABLE usdata.cityinfo(
+        zip int,
+        city text,
+        loc text,
+        pop int,
+        state text,
+
+        PRIMARY KEY(state,city)
+    ); 
+
+    COPY usdata.cityinfo(zip,city,loc,pop,state) FROM '~/Desktop/hw6/zips.csv'
+    WITH delimiter = ',' AND header = FALSE;
